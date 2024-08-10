@@ -4,6 +4,10 @@
 点击终端，在白空格后写python -m (复制在这里)
 然后按下enter，即运行
 表情网站：https://streamlit-emoji-shortcodes-streamlit-app-gwckff.streamlit.app/https://streamlit-emoji-shortcodes-streamlit-app-gwckff.streamlit.app/
+github官网:https://github.com
+streamlit官网:https://streamlit.io
+网易邮箱：https://mail.163.com/
+制作の网站の网址：https://zwfy7py3iwxqczlvihxboa.streamlit.app/
 '''
 import streamlit as st
 from PIL import Image
