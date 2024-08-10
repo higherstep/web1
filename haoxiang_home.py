@@ -137,7 +137,8 @@ def img_change(img, rc, gc, bc):
 def page5():
     '''我的不智能词典'''
     st.write(':full_moon:不智能词典:new_moon:')
-    st.spinner('WaItInG.......')
+    with st.spinner('WaItInG.......'):
+        pass
             
     
 if page == '我的兴趣推荐':
