@@ -13,7 +13,7 @@ import streamlit as st
 from PIL import Image
 import time
 
-page = st.sidebar.radio('我的首页',['我的兴趣推荐','我的图片处理工具','我的不智慧词典', '我的留言区'])
+page = st.sidebar.radio('我的首页',['我的兴趣推荐','我的图片处理工具','我的智慧词典', '我的留言区', '我的不智慧词典'])
 def page1():
     with open('八年五班《大香蕉》伴奏.MP3','rb') as f:
         mymp3=f.read()
@@ -42,7 +42,7 @@ def page2():
         
 def page3():
     '''我的智能词典'''
-    st.write(':full_moon:不智能词典:new_moon:')
+    st.write(':full_moon:智能词典:new_moon:')
     with open('words_space.txt','r',encoding='utf-8') as f:
         word_list=f.read().split('\n')
     for i in range(len(word_list)):
@@ -133,12 +133,44 @@ def img_change(img, rc, gc, bc):
             b=img_array[x,y][bc]
             img_array[x,y]=(r,g,b)
     return img
+
+def page5():
+    '''我的智能词典'''
+    st.write(':full_moon:不智能词典:new_moon:')
+    with open('words_space.txt','r',encoding='utf-8') as f:
+        word_list=f.read().split('\n')
+    for i in range(len(word_list)):
+        word_list[i]=word_list[i].split('#')
+    word_dict={}
+    for i in word_list:
+        word_dict[i[1]]=[int(i[0]),i[2]]#单词：[计数， 中文]
+    with open('check_out_times.txt', 'r',encoding='utf-8') as f:
+        time_list=f.read().split('\n')
+    for i in range(len(time_list)):
+        time_list[i]=time_list[i].split('#')
+        
+    time_dict={}
+    for i in time_list:
+        time_dict[int(i[0])]=int(i[1])
+             
+    word=st.text_input('请输入你想查询的单词：')
+    if word in word_dict:
+        with st.spinner('WaItInG.......'):
+                time.sleep(114514)
+            st.success('恭喜你成功啦！')
+    elif:
+        with st.spinner('WaItInG.......'):
+                time.sleep(114514)
+            st.success('恭喜你成功啦！')
+            
     
 if page == '我的兴趣推荐':
     page1()
 elif page == '我的图片处理工具':
     page2()
-elif page == '我的不智慧词典':
+elif page == '我的智慧词典':
     page3()
 elif page == '我的留言区':
     page4()
+elif page == '我的不智慧词典':
+    page5()
