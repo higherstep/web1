@@ -11,7 +11,7 @@ import time
 
 page = st.sidebar.radio('我的首页',['我的兴趣推荐','我的图片处理工具','我的智慧词典', '我的留言区'])
 def page1():
-    with open('八年五班《大香蕉》伴奏.mp3','rb') as f:
+    with open('八年五班《大香蕉》伴奏.MP3','rb') as f:
         mymp3=f.read()
         st.audio(mymp3, format='audio/mp3', start_time=0)
         st.image('bing_image_5.png')
