@@ -139,7 +139,7 @@ def page5():
     st.write(':full_moon:不智能词典:new_moon:')
     word=st.text_input('请输入你想查询的单词：')
     if word == word:
-        st.spinner('WaItInG.......'):
+        st.spinner('WaItInG.......')
         
             
     
