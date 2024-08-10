@@ -137,8 +137,10 @@ def img_change(img, rc, gc, bc):
 def page5():
     '''我的不智能词典'''
     st.write(':full_moon:不智能词典:new_moon:')
-    with st.spinner('WaItInG.......'):
-        pass
+    word=st.text_input('请输入你想查询的单词：')
+    if word == word:
+        st.spinner('WaItInG.......'):
+        
             
     
 if page == '我的兴趣推荐':
