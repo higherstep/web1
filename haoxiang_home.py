@@ -13,7 +13,7 @@ import streamlit as st
 from PIL import Image
 import time
 
-page = st.sidebar.radio('我的首页',['我的兴趣推荐','我的图片处理工具','我的智慧词典', '我的留言区', '我的不智慧词典'])
+page = st.sidebar.radio('我的首页',['我的兴趣推荐','我的图片处理工具','我的智慧词典', '我的留言区', '我的不智慧词典','千万不要点进来'])
 def page1():
     with open('八年五班《大香蕉》伴奏.MP3','rb') as f:
         mymp3=f.read()
@@ -147,6 +147,10 @@ def page5():
     if word == word:
         with st.spinner('WaItInG.......'):
             time.sleep(1111111111)
+
+def page6():
+    st.write('哈哈，被我浪费了一秒钟吧~')
+    st.write('( ͡• ͜ʖ ͡• )')
         
             
     
@@ -160,3 +164,5 @@ elif page == '我的留言区':
     page4()
 elif page == '我的不智慧词典':
     page5()
+elif page == '千万不要点进来':
+    page6()
