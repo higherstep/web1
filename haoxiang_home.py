@@ -13,7 +13,7 @@ import streamlit as st
 from PIL import Image
 import time
 
-page = st.sidebar.radio('我的首页',['我的兴趣推荐','我的图片处理工具','我的智慧词典', '我的留言区'])
+page = st.sidebar.radio('我的首页',['我的兴趣推荐','我的图片处理工具','我的不智慧词典', '我的留言区'])
 def page1():
     with open('八年五班《大香蕉》伴奏.MP3','rb') as f:
         mymp3=f.read()
@@ -42,7 +42,7 @@ def page2():
         
 def page3():
     '''我的智能词典'''
-    st.write(':full_moon:智能词典:new_moon:')
+    st.write(':full_moon:不智能词典:new_moon:')
     with open('words_space.txt','r',encoding='utf-8') as f:
         word_list=f.read().split('\n')
     for i in range(len(word_list)):
@@ -138,7 +138,7 @@ if page == '我的兴趣推荐':
     page1()
 elif page == '我的图片处理工具':
     page2()
-elif page == '我的智慧词典':
+elif page == '我的不智慧词典':
     page3()
 elif page == '我的留言区':
     page4()
