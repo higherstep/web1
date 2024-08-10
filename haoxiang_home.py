@@ -157,11 +157,9 @@ def page5():
     if word in word_dict:
         with st.spinner('WaItInG.......'):
                 time.sleep(114514)
-            st.success('恭喜你成功啦！')
     elif:
         with st.spinner('WaItInG.......'):
                 time.sleep(114514)
-            st.success('恭喜你成功啦！')
             
     
 if page == '我的兴趣推荐':
