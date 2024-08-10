@@ -18,7 +18,6 @@ def page1():
     with open('八年五班《大香蕉》伴奏.MP3','rb') as f:
         mymp3=f.read()
         st.audio(mymp3, format='audio/mp3', start_time=0)
-        st.image('bing_image.jpg')
         st.image('bing_image_1.png')
         st.image('bing_image_2.png')
         st.image('bing_image_3.png')
