@@ -135,31 +135,9 @@ def img_change(img, rc, gc, bc):
     return img
 
 def page5():
-    '''我的智能词典'''
+    '''我的不智能词典'''
     st.write(':full_moon:不智能词典:new_moon:')
-    with open('words_space.txt','r',encoding='utf-8') as f:
-        word_list=f.read().split('\n')
-    for i in range(len(word_list)):
-        word_list[i]=word_list[i].split('#')
-    word_dict={}
-    for i in word_list:
-        word_dict[i[1]]=[int(i[0]),i[2]]#单词：[计数， 中文]
-    with open('check_out_times.txt', 'r',encoding='utf-8') as f:
-        time_list=f.read().split('\n')
-    for i in range(len(time_list)):
-        time_list[i]=time_list[i].split('#')
-        
-    time_dict={}
-    for i in time_list:
-        time_dict[int(i[0])]=int(i[1])
-             
-    word=st.text_input('请输入你想查询的单词：')
-    if word in word_dict:
-        with st.spinner('WaItInG.......'):
-                time.sleep(114514)
-    elif:
-        with st.spinner('WaItInG.......'):
-                time.sleep(114514)
+    st.spinner('WaItInG.......')
             
     
 if page == '我的兴趣推荐':
